@@ -377,7 +377,7 @@ function setAddressSearch () {
 	$("#address").typeahead({
 		name: 'addresses',
 		remote: {
-			//url: config.search.url + '?f=json&where=UPPER(' + config.search.field + ") LIKE UPPER('%QUERY%')&outFields=" + config.search.field + "&returnGeometry=false",
+			//url: config.search.url + '?f=json&where=UPPER(' + config.search.field + ") LIKE UPPER('%QUERY%25')&outFields=" + config.search.field + "&returnGeometry=false",
 			url: "http://python-greconcsu.rhcloud.com/ws/addresses/like?input=%QUERY&limit=5",
 			filter: function (resp) {
 				addresses = resp;
